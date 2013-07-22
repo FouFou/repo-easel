@@ -62,13 +62,6 @@ function easel_admin_options() { ?>
 								$easel_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			
-			foreach (array(
-				'disable_default_design'
-			) as $key) {
-				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-				$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
-			}
-			
 			$tab = 'layout';
 			update_option('easel-options', $easel_options);
 		}
@@ -85,29 +78,6 @@ function easel_admin_options() { ?>
 			update_option('easel-options', $easel_options);
 		}
 		
-		if ($_REQUEST['action'] == 'easel_save_addons') {
-			foreach (array(
-				'enable_addon_page_options',
-				'enable_addon_membersonly',
-				'enable_addon_showcase',
-				'enable_addon_showcase_slider',
-				'enable_addon_playingnow',
-				'enable_addon_commpress'
-			) as $key) {
-				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-				$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
-			}
-			
-			foreach (array(
-				'non_members_message'
-			) as $key) {
-				if (isset($_REQUEST[$key])) 
-					$easel_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
-			}
-			
-			$tab = 'addons';
-			update_option('easel-options', $easel_options);
-		}
 		if ($_REQUEST['action'] == 'easel_save_menubar') {
 
 			foreach (array(
@@ -209,7 +179,6 @@ function easel_admin_options() { ?>
 				'layout' => __('Layout', 'easel'),
 		  		'general' => __('General', 'easel'),
 				'menubar' => __('Menubar', 'easel'),
-				'addons' => __('Addons', 'easel'),
 				'debug' => __('Debug', 'easel') 
 		  	);
 
@@ -250,7 +219,7 @@ function easel_admin_options() { ?>
 	</script>
 </div>
 	<div class="eadmin-footer">
-		<div id="easel-version-title"><a href="http://frumph.net/">Easel <?php echo easel_themeinfo('version'); ?></a></div>
+		<div id="easel-version-title"><a href="http://frumph.net/">Responsive Easel <?php echo easel_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Created, Developed and maintained by','easel'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small><br />
 		<?php _e('If you like the Easel theme, please donate.  It will help in developing new features and versions.','easel'); ?>

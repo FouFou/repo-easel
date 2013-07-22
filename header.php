@@ -4,11 +4,8 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<title><?php wp_title(); ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
-<?php if (!easel_themeinfo('disable_default_design')) { ?>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-default.css" type="text/css" media="screen" />
-<?php } ?>
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<meta name="Easel" content="<?php echo easel_themeinfo('version'); ?>" />
+	<meta name="Responsive Easel" content="<?php echo easel_themeinfo('version'); ?>" />
 <?php wp_head(); ?>
 </head>
 
