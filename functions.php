@@ -422,3 +422,11 @@ function geek_add_google_to_head_section() {
 	
 add_action('wp_head', 'geek_add_google_to_head_section');
 */
+
+function easel_check_sidebar_span() {
+	if (easel_is_layout('3c,3cl,3cr')) {
+		echo 'span3';
+	} else {
+		echo 'span4';
+	}
+}

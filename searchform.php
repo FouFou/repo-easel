@@ -1,5 +1,4 @@
-<form method="get" class="searchform" action="<?php echo home_url(); ?>">
-	<input type="text" value="<?php _e('Search...','easel'); ?>" name="s" class="s-search" onfocus="this.value=(this.value=='<?php _e('Search...','easel'); ?>') ? '' : this.value;" onblur="this.value=(this.value=='') ? '<?php _e('Search...','easel'); ?>' : this.value;" />
-	<button type="submit">&raquo;</button>
+<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url(); ?>">
+	<input type="text" class="search-query" placeholder="Search" name="s" id="s">
 </form>
 <div class="clear"></div>
