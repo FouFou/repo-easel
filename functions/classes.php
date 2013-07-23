@@ -31,8 +31,8 @@ function easel_body_class($classes = '') {
 	elseif($is_chrome) $classes[] = 'chrome';
 	elseif($is_IE) $classes[] = 'ie';
 	else $classes[] = 'unknown';
-	if($is_iphone) $classes[] = 'iphone';
-
+	if ($is_iphone) $classes[] = 'iphone';
+	if (wp_is_mobile()) $classes[] = 'is-mobile';
 
 // Hijacked from the hybrid theme, http://themehybrid.com/
 	if (is_single()) {

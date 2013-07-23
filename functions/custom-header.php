@@ -27,8 +27,8 @@ add_theme_support( 'custom-header', array(
 
 function easel_admin_header_style() { ?>
 	<style type="text/css">
-	#headimg { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; }
-	#headimg h1, #headimg .description { display: none; }
+	header { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; }
+	header h1, #headimg .description { display: none; }
 	</style>
 	<?php
 }
@@ -36,10 +36,10 @@ function easel_admin_header_style() { ?>
 function easel_header_style() { 
 	if (get_header_image()) { ?>
 		<style type="text/css">
-		#header { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; overflow: hidden; }
-		#header h1 { padding: 0; }
-		#header h1 a { display: block; width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; text-indent: -9999px; }
-		#header .description { display: none; }
+		header { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; overflow: hidden; }
+		header h1 { padding: 0; }
+		header h1 a { display: block; width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; text-indent: -9999px; }
+		header .description { display: none; }
 		</style>
 	<?php }
 }

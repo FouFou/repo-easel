@@ -20,8 +20,9 @@ html {
 body {
 	margin: 0;
 	font-family: 'Arial', sans-serif;
-	font-size: 14px;
 	color: #000;
+	height: 100%;
+	font-size: 14px;
 }
 
 a {
@@ -111,6 +112,17 @@ form {
 input, textarea {
 	font-family: 'Arial' , sans-serif;
 	font-size: 13px;
+	width: auto;
+	display: table;
+}
+
+code {
+	display: block;
+	white-space: normal; 
+}
+
+select {
+	max-width: 100%;
 }
 
 /* WP Aligns */
@@ -147,6 +159,47 @@ input, textarea {
 	text-align: center;
 }
 
+/* Responsive */
+
+article {
+	margin-bottom: 20px;
+}
+
+article h1{
+	font-size: 20px;
+	line-height: 25px;
+}
+
+aside h2{
+	font-size: 18px;
+	line-height: 23px;
+	text-align:center;
+}
+
+aside ul{
+	margin: 0 0 20px 0;
+	text-align:center;
+	list-style:none;
+}
+
+.container-fluid {
+	max-width: 980px; /* CHANGE THIS TO CHANGE WIDTH OF PAGE */
+	margin: 0 auto;
+	padding: 0 !important;
+}
+
+span {
+	margin: 0 !important;
+}
+
+.span3 {
+	margin: 0 auto !important;
+}
+
+[class*="span"] {
+	margin: 0 !important;
+}
+
 /* HEADINGS */
 
 h1, h1 a {
@@ -164,6 +217,12 @@ h2, h2 a {
 	line-height: 24px;
 	letter-spacing: -1px;
 }
+
+	h2.widgettitle, h2.description {
+		font-size: 17.5px;
+		line-height: 20px;
+	}
+
 
 h3, h3 a {
 	padding: 0;
@@ -185,7 +244,10 @@ h4, h4 a {
 #page-wrap {}
 
 #page {
-	width: 980px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	padding-bottom: 50px;
 	margin: 0 auto;
 }
 
@@ -383,42 +445,22 @@ body.layout-2cl #page, body.layout-2cr #page{
 
 /* Content-Wrapper */
 
-#content-wrapper {}
+#content-wrapper { background: #ccc; }
 
 /* Subcontent-Wrapper */
 
 #subcontent-wrapper {}
 
-#content, #column {
+#content {
 	float: left;
-	padding: 1px;
-	overflow: hidden;
+	overflow: hidden; 
+	background: #eee;
+	padding: 1px 3px;
 }
 
 body.wide #content {
 	float: none;
 	width: 100%;
-}
-
-.narrowcolumn {
-	width: 550px;
-}
-
-body.layout-2cl .narrowcolumn, body.layout-2cr .narrowcolumn {
-	width: 560px;
-}
-
-body.layout-2clw .narrowcolumn, body.layout-2crw .narrowcolumn {
-	width: 764px;
-}
-
-body.wide .narrowcolumn, body.signup .narrowcolumn {
-	width: auto;
-}
-
-/* this handles the GN style layouts that need to contain that section */
-.section {
-	width: 780px;
 }
 
 /* Posts Area  */
@@ -545,6 +587,10 @@ a.post-edit-link {
 
 /* Comments */
 
+#comment-wrapper {
+	padding: 5px;
+}
+
 .comment-link {
 	font-weight: bold;
 	text-align: right;
@@ -572,12 +618,17 @@ a.post-edit-link {
 	height: 64px;
 	display: inline-block;
 	float: left;
-	margin-right: 10px;
 	overflow: hidden;
+	float:left;
+	margin: 0 10px 10px 0;
 }
 
 .comment-content {
 	margin-left: 68px;
+}
+
+.comment-author {
+	font-weight: 700;
 }
 
 .comment-author cite {
@@ -591,7 +642,8 @@ a.post-edit-link {
 }
 
 .comment-meta-data {
-	font-size: 11px;
+	font-size: .8em; 
+	line-height: 1em;
 }
 
 .comment .comment .comment-permalink {
@@ -643,10 +695,19 @@ a.post-edit-link {
 	float: right;
 }
 
+.commentlist {
+	list-style:none; 
+	margin: 0;
+}
+
 .commentlist ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+
+.commentlist li {
+	clear:both;
 }
 
 ol.commentlist {
@@ -698,8 +759,11 @@ ul.children {
 }
 
 textarea#comment {
-	width: 90%;
-	height: 80px;
+	width: 100%;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	height: 150px;
 }
 
 #comment, #author, #email, #url, .comment-textarea, 
@@ -751,13 +815,17 @@ textarea#comment {
 #sidebar-left {
 	float: left;
 	width: 210px;
-	padding: 1px;
+	padding: 1px 5px;
+	margin: 0 auto;
+	background: #aaa;
 }
 
 #sidebar-right {
-	float: left;
+	float: right;
 	width: 210px;
-	padding: 1px;
+	padding: 1px 5px;
+	margin: 0 auto;
+	background: #aaa;
 }
 
 .sidebar-basic ul, .sidebar-basic li {
@@ -839,7 +907,7 @@ textarea#comment {
 	}
 .
 #page-foot {
-	width: 980px;
+	width: 1000px;
 	color: #fff;
 	margin: 0 auto;
 	text-align: right;
@@ -1552,60 +1620,6 @@ span.author-archive-date {
 	text-align: right;
 }
 
-/* Slider controls */
-.slider-controls {
-	float: left;
-	width: 100%;
-	height: 20px;
-	overflow: hidden;
-	clear: both;
-	line-height: 15px;
-	margin: 0 0 0;
-	display: block;
-	padding: 0 10px;
-	}
-.slider-controls .slider-prev {
-	text-indent: -9999px;
-	float: left;
-	width: 22px;
-	height: 20px;
-	background: url('images/slider/slider-prev.png') no-repeat 0 0;
-	border: none !important;
-	}
-.slider-controls .slider-prev:hover {
-	background: url('images/slider/slider-prev.png') no-repeat left -20px;
-	}
-.slider-controls .slider-pause {
-	text-indent: -9999px;
-	float: left;
-	width: 22px;
-	height: 20px;
-	background: url('images/slider/pause.png') no-repeat center 0;
-	border: none !important;
-	}
-.slider-controls .slider-pause:hover, .slider-controls a.paused {
-	background: url('images/slider/pause.png') no-repeat center -20px;
-	}
-.slider-controls .slider-next {
-	text-indent: -9999px;
-	float: left;
-	width: 22px;
-	height: 20px;
-	background: url('images/slider/slider-next.png') no-repeat right 0;
-	border: none !important;
-	}
-.slider-controls .slider-next:hover {
-	background: url('images/slider/slider-next.png') no-repeat right -20px;
-	}
-	
-h2.slider-title a, h2.slider-title {
-	color: #000;
-}
-
-h2.slider-title a:hover, h2.slider-title:hover {
-	color: #fcff00;
-}
-
 /* comic easel mini navigation overrides */
 
 .mininav-prev a, .mininav-next a {
@@ -1635,4 +1649,55 @@ h2.slider-title a:hover, h2.slider-title:hover {
 /* Shows the footer again in case all posts have been loaded */
 .infinity-end.neverending #footer {
 	display: block;
+}
+
+/* Tablet Sizes */
+@media (max-width: 979px) {
+	.row-fluid .leaderboard {
+		width: auto;
+		margin: 10px auto;
+		display: block;
+		float: none;
+	}
+
+	.mininav-wrapper{
+		display:none;
+	}
+
+	.menunav-social-wrapper{float:none;}
+
+	.menunav-rss{
+		padding: 9px 15px;
+		font-weight: bold;
+		color: #777;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		display:block;
+		width: auto;
+	}
+	.menunav-rss:hover, .menunav-rss:focus, .menunav-social-wrapper a:focus{
+		background: #f2f2f2;
+	}
+
+	.nav-collapse .nav{
+		margin-bottom: 0;
+	}
+
+}
+
+/* Phone Sizes */ 
+@media (max-width: 767px) {
+	.comicSidebars2 #comic, 
+	.comicSidebars1 #comic{
+		width: 100%;
+		float:none;
+		margin:0;
+		padding:0;
+	}
+	/* For mobile browsing optimization/ease of naviation, 
+	I'm just hiding all comic sidebars */
+	#comic-wrap .sidebar{
+		display:none;
+	}
 }

@@ -4,18 +4,12 @@ if ( post_password_required() ) { ?>
 	<?php
 	return;
 }
-if (function_exists('in_members_category')) {
-	if (in_members_category() && !easel_is_member()) { ?>
-		<p class="closed-comments-to-non-members"><?php _e('Comments are closed to non-members.','easel'); ?></p>
-		<?php return;
-	}
-}
 
 if (!comments_open() && !get_comments_number()) {
 	return;
 }
 ?>
-<div id="comment-wrapper-head"></div>
+
 <div id="comment-wrapper">
 <?php if (comments_open() && (get_comments_number() > 0)) { ?> 
 	<div class="commentsrsslink"><?php post_comments_feed_link(__('Comments RSS', 'easel')); ?></div>
@@ -86,7 +80,7 @@ if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']
 }
 
 if (comments_open()) { ?>
-<div class="comment-wrapper-respond">
+<div class="comment-wrapper-respond form-horizontal">
 	<?php
 	$fields =  array(
 			'author' => '<p class="comment-form-author">' .
@@ -112,4 +106,3 @@ if (comments_open()) { ?>
 	<p class="closed-comments"><?php _e('Comments are closed.','easel'); ?></p>
 <?php } ?>
 </div>
-<div id="comment-wrapper-foot"></div>
