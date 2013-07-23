@@ -185,20 +185,9 @@ aside ul{
 .container-fluid {
 	max-width: 980px; /* CHANGE THIS TO CHANGE WIDTH OF PAGE */
 	margin: 0 auto;
-	padding: 0 !important;
+
 }
 
-span {
-	margin: 0 !important;
-}
-
-.span3 {
-	margin: 0 auto !important;
-}
-
-[class*="span"] {
-	margin: 0 !important;
-}
 
 /* HEADINGS */
 
@@ -249,10 +238,6 @@ h4, h4 a {
 	height: 100%;
 	padding-bottom: 50px;
 	margin: 0 auto;
-}
-
-body.layout-2cl #page, body.layout-2cr #page{
-	width: 780px;
 }
 
 /* Header */
@@ -445,22 +430,18 @@ body.layout-2cl #page, body.layout-2cr #page{
 
 /* Content-Wrapper */
 
-#content-wrapper { background: #ccc; }
+#content-wrapper { 
+	background: #ccc; 
+
+}
 
 /* Subcontent-Wrapper */
 
 #subcontent-wrapper {}
 
-#content {
-	float: left;
-	overflow: hidden; 
+#content { 
 	background: #eee;
-	padding: 1px 3px;
-}
-
-body.wide #content {
-	float: none;
-	width: 100%;
+	padding: 10px;
 }
 
 /* Posts Area  */
@@ -813,18 +794,12 @@ textarea#comment {
 /* Default Sidebars */
 
 #sidebar-left {
-	float: left;
-	width: 210px;
-	padding: 1px 5px;
-	margin: 0 auto;
+
 	background: #aaa;
 }
 
 #sidebar-right {
-	float: right;
-	width: 210px;
-	padding: 1px 5px;
-	margin: 0 auto;
+
 	background: #aaa;
 }
 

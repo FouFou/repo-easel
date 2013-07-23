@@ -15,7 +15,7 @@ if (is_active_sidebar('ceo-sidebar-right-of-comic')) {
 		<?php do_action('easel-content-area'); ?>
 		<?php do_action('comic-area'); ?>
 	</div>
-	<div id="subcontent-wrapper">
+	<div id="subcontent-wrapper" class="row-fluid">
 		<?php do_action('easel-subcontent-area-top'); ?>
 <?php
 if (!easel_is_signup() && !easel_sidebars_disabled() && !wp_is_mobile()) {

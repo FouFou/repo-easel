@@ -4,10 +4,11 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title(); ?></title>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<meta name="Responsive Easel" content="<?php echo easel_themeinfo('version'); ?>" />
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+
 </head>
 
 <body <?php body_class(); ?>>
