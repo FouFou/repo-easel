@@ -3195,7 +3195,7 @@ button.close {
   -webkit-appearance: none;
 }
 
-.btn {
+.btn, input[type='submit'] {
   display: inline-block;
   *display: inline;
   padding: 4px 12px;
@@ -3237,14 +3237,19 @@ button.close {
 .btn:active,
 .btn.active,
 .btn.disabled,
-.btn[disabled] {
+.btn[disabled],
+input[type='submit']:hover,
+input[type='submit']:focus,
+input[type='submit']:active,
+input[type='submit']:disabled {
   color: #333333;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
 }
 
 .btn:active,
-.btn.active {
+.btn.active,
+input[type='submit']:active {
   background-color: #cccccc \9;
 }
 

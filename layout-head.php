@@ -10,7 +10,7 @@ if (is_active_sidebar('ceo-sidebar-right-of-comic')) {
 	$comicSidebarCount += 1;
 }
 ?>
-<div id="content-wrapper" class="container-fluid">
+<div id="content-wrapper" >
 	<div class="row-fluid <?php echo $comicSidebars;?> comicSidebars<?php echo $comicSidebarCount ?>"> 
 		<?php do_action('easel-content-area'); ?>
 		<?php do_action('comic-area'); ?>

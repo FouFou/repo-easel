@@ -1,4 +1,4 @@
-<div id="sidebar-right" class="hidden-phone sidebar <?php echo (easel_is_layout('3c,3cl,3cr')) ? 'span3' : 'span4'; ?>">
+<aside id="sidebar-right" class="hidden-phone sidebar <?php echo (easel_is_layout('3c,3cl,3cr')) ? 'span3' : 'span4'; ?>">
 <?php
 	do_action('easel-sidebar-right');
 	if ( !dynamic_sidebar('sidebar-right-sidebar') ) { ?>
@@ -17,4 +17,4 @@
 		</ol>						
 	<?php }
 ?>
-</div>
+</aside>

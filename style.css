@@ -17,13 +17,7 @@ html {
 	overflow-y: scroll;
 }
 
-body {
-	margin: 0;
-	font-family: 'Arial', sans-serif;
-	color: #000;
-	height: 100%;
-	font-size: 14px;
-}
+
 
 a {
 	text-decoration: none;
@@ -58,24 +52,9 @@ p.attachment {
 	text-align: center;
 }
 
-img {
-	padding: 0;
-	margin: 0;
-}
 
 .entry img, .post-content img {
 	max-width: 100%;
-}
-
-small {
-	font-size: 12px;
-}
-
-hr {
-	height: 1px;
-	color: #000;
-	background-color: #000;
-	border: 0px;
 }
 
 blockquote {
@@ -105,20 +84,11 @@ acronym, abbr {
 	border-bottom: 1px dashed #000;
 }
 
-form {
-	margin: 0;
-}
 
-input, textarea {
-	font-family: 'Arial' , sans-serif;
-	font-size: 13px;
-	width: auto;
-	display: table;
-}
 
 code {
 	display: block;
-	white-space: normal; 
+white-space: normal;
 }
 
 select {
@@ -189,6 +159,14 @@ aside ul{
 }
 
 
+.navbar-search .search-query{
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 29px;
+}
+
 /* HEADINGS */
 
 h1, h1 a {
@@ -226,18 +204,6 @@ h4, h4 a {
 	margin: 0;
 	font-size: 15px;
 	clear: both;
-}
-
-/* Page */
-
-#page-wrap {}
-
-#page {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	padding-bottom: 50px;
-	margin: 0 auto;
 }
 
 /* Header */
@@ -647,7 +613,6 @@ a.post-edit-link {
 }
 
 .comment-note {
-	width: 380px;
 	text-align: left;
 	display: inline-block;
 	font-size: 11px;
@@ -739,33 +704,7 @@ ul.children {
 	font-size: 13px;
 }
 
-textarea#comment {
-	width: 100%;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
-	box-sizing: border-box;
-	height: 150px;
-}
 
-#comment, #author, #email, #url, .comment-textarea, 
-.easel_control_panel_widget #user_login, .easel_control_panel_widget #user_pass {
-	padding: 2px;
-	color: #000;
-	font-family: 'Verdana' , sans-serif;
-	font-size: 12px;
-	background: #ccc;
-	border: 1px solid #999;
-	-moz-border-radius: 6px;
-	-khtml-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-}
-
-#comment-textarea:focus, #comment:hover, #author:hover, #email:hover, 
-#url:hover, #comment:focus, #author:focus, #email:focus, #url:focus,
-.easel_control_panel_widget #user_login:focus, .easel_control_panel_widget #user_pass:focus {
-	background: #fff;
-}
 
 /* Pagenav / Comment Nav */
 
@@ -1311,47 +1250,16 @@ span.author-archive-date {
 
 /* comment form */
 
-#comment, #author, #email, #url, .s-search, .easel_control_panel_widget input {
-	padding: 2px;
-	color: #000;
-	font-family: 'Verdana' , sans-serif;
-	font-size: 12px;
-	background: #eee;
-	border: 1px solid #888;
-	-moz-border-radius: 6px;
-	-khtml-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-}
-
-#comment:focus, #comment:hover, #author:hover, #email:hover, #url:hover, #author:focus, #email:focus, #url:focus,
-.easel_control_panel_widget #sname:focus, .easel_control_panel_widget #sname:hover,
-.easel_control_panel_widget #spassword:focus, .easel_control_panel_widget #spassword:hover, .s-search:focus {
-	background: #fff;
-}
-
-.searchform {
-	margin-top: 2px;
-	margin-left: 2px;
+textarea#comment {
+width: 100%;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+height: 150px;
 }
 
 .easel_control_panel_widget #user_login, .easel_control_panel_widget #user_pass {
 	width: 160px;
-}
-
-#submit, .searchform button, #comic button, .easel_control_panel_widget .button-primary {
-	background: #ccc;
-	color: #000;
-	-moz-border-radius: 6px;
-	-khtml-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	background:-moz-linear-gradient(100% 100% 90deg,#aaa, #ccc, #ddd 100%);
-	background:-o-linear-gradient(rgb(30,30,30),rgb(44,44,44));
-	background-image: -webkit-gradient(
-          linear, left top, left bottom, from(rgba(255, 255, 255, 1.0)),
-          to(rgba(170, 170, 170, 3.0))
-        );
 }
 
 .sidebar .widget_archive select, .easel_archive_dropdown_widget select {
@@ -1381,32 +1289,10 @@ span.author-archive-date {
 	background: #ddd;
 }
 
-#submit {
-	font-weight: 700;
-}
-
-#submit:hover, .searchform button:hover {
-	color: #f00;
-}
-
 .searchform {
 	float: left;
 }
 
-.ie .searchform button, .ie #submit {
-	display: inline-block;
-	float: left;
-	background: #ccc;
-	color: #000;
-	line-height: 18px;
-	font-size: 16px;
-	border: solid 1px #888;
-}
-
-.chrome .searchform button {
-	line-height: 16px;
-	margin-top: 0;
-}
 
 .widget_rss a.rsswidget {
 	display: inline-block;

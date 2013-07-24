@@ -6,6 +6,5 @@ if (!easel_is_signup() && !easel_sidebars_disabled() && !wp_is_mobile()) {
 	if (easel_is_layout('2cr,2crw,3c,3cr')) easel_get_sidebar('right');
 }
 ?>
-		<div class="clear"></div>
 	</div>
 </div>
